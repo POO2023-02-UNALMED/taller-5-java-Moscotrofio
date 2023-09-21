@@ -19,7 +19,7 @@ public class Animal {
     }
 
     public Animal(){
-        this(null, 0, null, null, null);
+        this(null, 0, null, null);
     }
 
     public String movimiento() {

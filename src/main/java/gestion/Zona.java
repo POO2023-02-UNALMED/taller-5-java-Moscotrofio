@@ -40,11 +40,11 @@ public class Zona {
         this.zoo = zoo;
     }
 
-    public Arraylist<Animal> getAnimales() {
+    public ArrayList<Animal> getAnimales() {
         return this.animales;
     }
 
-    public void setAnimales(Arraylist<Animal> animales) {
+    public void setAnimales(ArrayList<Animal> animales) {
         this.animales = animales;
     }
 }

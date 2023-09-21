@@ -48,7 +48,7 @@ public class Mamifero extends Animal {
         return this.pelaje;
     }
 
-    public void setPelaje(String pelaje) {
+    public void setPelaje(boolean pelaje) {
         this.pelaje = pelaje;
     }
 
@@ -56,7 +56,7 @@ public class Mamifero extends Animal {
         return this.patas;
     }
 
-    public void setPatas(String patas) {
+    public void setPatas(int patas) {
         this.patas = patas;
     }
 }
