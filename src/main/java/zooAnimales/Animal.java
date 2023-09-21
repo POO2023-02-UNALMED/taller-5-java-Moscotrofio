@@ -1,4 +1,6 @@
+package zooAnimales;
 import java.util.ArrayList;
+
 public class Animal {
     private static int totalAnimales;
     private String nombre;
@@ -7,12 +9,11 @@ public class Animal {
     private String genero;
     private Zona zona;
 
-    public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public Animal(String nombre, int edad, String habitat, String genero) {
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
-        this.zona = zona;
         totalAnimales += 1;
     }
 
@@ -31,7 +32,7 @@ public class Animal {
 
     public String toString(){
         if (this.getZona() != null) {
-            return "Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + "y mi genero es " + this.getGenero() + ", la zona en la que me ubico es " + this.getZona().getNombre() + ", en el #"+ getZona().getZoo().getNombre();
+            return "Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + "y mi genero es " + this.getGenero() + ", la zona en la que me ubico es " + this.getZona().getNombre() + ", en el "+ getZona().getZoo().getNombre();
         } else {
             return "Mi nombre es " + this.getNombre() + ", tengo una edad de " + this.getEdad() + ", habito en " + this.getHabitat() + "y mi genero es " + this.getGenero();
         }

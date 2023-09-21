@@ -1,15 +1,22 @@
+package zooAnimales;
 import java.util.ArrayList;
+
 public class Reptil extends Animal {
-    private ArrayList<Reptil> listado= new ArrayList<>();
+    private static ArrayList<Reptil> listado= new ArrayList<>();
     public static int iguanas;
     public static int serpientes;
     private String colorEscamas;
     private int largoCola;
 
-    public Reptil(String nombre, int edad, String habitat, String genero,  Zona[] zona, String colorEscamas, int largoCola){
-        super(nombre, edad, habitat, genero, zona);
+    public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola){
+        super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
+        Reptil.listado.add(this);
+    }
+
+    public Reptil() {
+        this(null, 0, null, null, null, 0);
     }
 
     public static int cantidadReptiles() {
@@ -20,16 +27,39 @@ public class Reptil extends Animal {
         return "reptar";
     }
 
-    public void crearIguana(String nombre, int edad, String genero, Zona[] zona) {
-        Reptil iguana = new Reptil(nombre, edad, "humedal", genero, zona, "verde", 3);
+    public static Reptil crearIguana(String nombre, int edad, String genero) {
+        Reptil iguana = new Reptil(nombre, edad, "humedal", genero, "verde", 3);
         Reptil.iguanas += 1;
-        listado.add(iguana);
+        return iguana;
     }
 
-    public void crearSerpiente(String nombre, int edad, String genero,  Zona[] zona) {
-        Reptil serpiente = new Reptil(nombre, edad, "jungla", genero, zona, "blanco", 1);
+    public static Reptil  crearSerpiente(String nombre, int edad, String genero) {
+        Reptil serpiente = new Reptil(nombre, edad, "jungla", genero, "blanco", 1);
         Reptil.serpientes += 1;
-        listado.add(serpiente);
+        return serpiente;
     }
 
+    public static ArrayList<Reptil> getListado() {
+        return Reptil.listado;
+    } 
+
+    public static void setListado(ArrayList<Reptil> listado) {
+        Reptil.listado = listado;
+    }
+
+    public String getColorEscamas() {
+        return this.colorPlumas;
+    }
+
+    public void setColorEscamas(String colorEscamas) {
+        this.colorEscamas = colorEscamas;
+    }
+
+    public int getLargoCola() {
+        return this.largoCola;
+    }
+
+    public void setLargoCola(int largoCola) {
+        this.largoCola = largoCola;
+    }
 }
