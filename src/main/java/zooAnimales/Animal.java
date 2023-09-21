@@ -26,8 +26,7 @@ public class Animal {
     }
 
     public String totalPorTipo() {
-        return "“Mamiferos: "+ Mamifero.cantidadMamiferos() +"\nAves: "+ Ave.cantidadAves() +"\nReptiles: " + Reptil.cantidadReptiles() + "\nPeces: "+ Pez.cantidadPeces() +"\nAnfibios:" + Anfibio.cantidadAnfibios();
-
+        return "Mamiferos: "+ Mamifero.cantidadMamiferos() +"\nAves: "+ Ave.cantidadAves() +"\nReptiles: " + Reptil.cantidadReptiles() + "\nPeces: "+ Pez.cantidadPeces() +"\nAnfibios:" + Anfibio.cantidadAnfibios();
     }
 
     public String toString(){
@@ -46,6 +45,7 @@ public class Animal {
     public void setTotalAnimales(int totalAnimales) {
         Animal.totalAnimales = totalAnimales;
     }
+
     public String getNombre() {
         return this.nombre;
     }
